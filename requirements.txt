@@ -65,6 +65,7 @@ lottie
 qrcode
 spotdl
 tracemoepy==3.8
+tgcalls
 validators
 geopy
 prettytable==3.2.0

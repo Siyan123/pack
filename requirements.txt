@@ -11,6 +11,7 @@ google-auth-httplib2>=0.0.4
 google-auth-oauthlib>=0.4.2
 googletrans==3.1.0a0
 gtts
+futures==2.2.0
 hachoir>=3.1.1
 heroku3>=4.2.3
 html-telegraph-poster>=0.2.31
@@ -51,3 +52,19 @@ ujson>=4.0.1
 youtube-search-python==1.4.2
 google_images_download
 feedparser>=6.0.2
+cairosvg
+coffeehouse
+deezloader
+emoji-country-flag
+geopy
+glitch-this
+humanize
+justwatch
+lottie
+prettytable
+pydub
+pyfiglet
+pytgcalls
+qrcode
+tracemoepy==3.8
+validators

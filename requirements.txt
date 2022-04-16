@@ -38,7 +38,7 @@ selenium==3.141.0
 setuptools>=40.3.0
 spamwatch>=0.3.0
 speedtest-cli>=2.1.2
-stagger==1.0.1
+git+https://github.com/staggerpkg/stagger
 telegraph>=1.4.1
 tgcrypto
 urbandict>=0.5

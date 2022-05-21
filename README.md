@@ -8,7 +8,7 @@
 
 </p>
 
-### Pytjon 3.10
+### Python 3.10
 
 <p align="center">
 

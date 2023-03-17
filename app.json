@@ -47,12 +47,12 @@
 			"url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
 		},
 		{ "url": "https://github.com/HasibulKabir/heroku-buildpack-rarlab.git" },
-		{ "url": "https://github.com/opendoor-labs/heroku-buildpack-p7zip" },
-		{ "url": "https://github.com/ashwinstr/heroku-buildpack-google-chrome" },
-		{ "url": "https://github.com/ashwinstr/heroku-buildpack-chromedriver" },
+		{ "url": "https://github.com/riganf/heroku-buildpack-p7zip" },
+		{ "url":"https://github.com/heroku/heroku-buildpack-google-chrome" },
+		{ "url": "https://github.com/heroku/heroku-buildpack-chromedriver" },
 		{ "url": "https://github.com/chrismytton/heroku-buildpack-jq.git" },
 		{ "url": "https://github.com/justaprudev/heroku-buildpack-neofetch.git" },
-		{ "url": "https://github.com/dishapatel010/mediainfo_buildpack.git" },
+		{ "url": "https://github.com/TheMatheusDev/mediainfo_buildpack.git" },
 		{ "url": "heroku/python" }
 	]
 }

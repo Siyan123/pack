@@ -61,7 +61,7 @@ get_branch () {
     then
         branch=$(echo $PREF_BRANCH | xargs)
     else
-        branch=alpha
+        branch=main
     fi
     echo "/archive/refs/heads/$branch.zip"
 }
@@ -73,7 +73,7 @@ get_ziplink () {
     then 
         echo "${UPSTREAM_REPO}$(get_branch)"
     else
-        echo "$(echo "aHR0cHM6Ly9naXRodWIuY29tL2NvZGUtcmdiL1VTRVJHRS1Y" | base64 -d)$(get_branch)"
+        echo "$(echo "aHR0cHM6Ly9naXRodWIuY29tL2FzaHdpbnN0ci9WZW5vbVg=" | base64 -d)$(get_branch)"
     fi
 }
 
@@ -93,11 +93,11 @@ _setup_repo () {
 
 _startbot () {
     local bot_dir
-    bot_dir=$(cd $WORK_DIR && ls) && mv "$WORK_DIR/$bot_dir" "USERGE-X"
+    bot_dir=$(cd $WORK_DIR && ls) && mv "$WORK_DIR/$bot_dir" "VX"
     rm -rf $WORK_DIR
-    cd "USERGE-X"
+    cd "VX"
     git init > /dev/null 2>&1
-    echo -e ">><< --- >><<  Starting [X]  >><< --- >><<\n" | indent
+    echo -e ">><< --- >><<  Starting [Venom-X]  >><< --- >><<\n" | indent
     bash run
 }
 

@@ -70,7 +70,7 @@ get_repolink () {
     then 
         echo "${UPSTREAM_REPO}"
     else
-        echo "$(echo "aHR0cHM6Ly9naXRodWIuY29tL2FzaHdpbnN0ci9WZW5vbVg=" | base64 -d)"
+        echo "$(echo "aHR0cHM6Ly9naXRodWIuY29tL1NpeWFuMTIzL1Zlbm9teA==" | base64 -d)"
     fi
 }
 

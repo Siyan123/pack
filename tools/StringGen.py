@@ -25,13 +25,14 @@ if path.isfile("config.env"):
 
 async def genStrSession() -> None:
     async with Client(
-        "X",
+        name = "X",
         api_id=int(environ.get("API_ID") or input("Enter Telegram APP ID: ")),
         api_hash=environ.get("API_HASH") or input("Enter Telegram API HASH: "),
+        in_memory=True,
     ) as app:
         print("\nprocessing...")
         await app.send_message(
-            "me", f"#X #HU_STRING_SESSION\n\n```{await app.export_session_string()}```"
+            "me", f"#X #STRING_SESSION\n\n`{await app.export_session_string()}`"
         )
         print("Done !, session string has been sent to saved messages!")
 

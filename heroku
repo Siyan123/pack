@@ -18,9 +18,6 @@
 # error precaution.
 set -e
 
-WORK_DIR="userbot"
-mkdir -p $WORK_DIR
-
 disp () {
     echo "-----> $*"
 }
@@ -61,43 +58,31 @@ get_branch () {
     then
         branch=$(echo $PREF_BRANCH | xargs)
     else
-        branch=alpha
+        branch=main
     fi
-    echo "/archive/refs/heads/$branch.zip"
+    echo $branch
 }
 
-get_ziplink () {
+get_repolink () {
     local regex
     regex='(https?)://github.com/.+/.+'
     if [[ $UPSTREAM_REPO =~ $regex ]]
     then 
-        echo "${UPSTREAM_REPO}$(get_branch)"
+        echo "${UPSTREAM_REPO}"
     else
-        echo "$(echo "aHR0cHM6Ly9naXRodWIuY29tL2NvZGUtcmdiL1VTRVJHRS1Y" | base64 -d)$(get_branch)"
+        echo "$(echo "aHR0cHM6Ly9naXRodWIuY29tL2FzaHdpbnN0ci9WZW5vbVg=" | base64 -d)"
     fi
 }
 
 _setup_repo () {
-    local zippath
-    zippath="$WORK_DIR/temp.zip"
-    disp "Fetching Update from Upstream Repo"
-    wget -qq $(get_ziplink) -O "$zippath"
-    _done
-    disp "Unpacking Data"
-    unzip -qq "$zippath" -d "$WORK_DIR"
-    _done
-    disp "Cleaning"
-    rm -rf "$zippath"
+    disp "Fetching Upstream Repo"
+    git clone -q -b "$(get_branch)" "$(get_repolink)" VX
     _done
 }
 
 _startbot () {
-    local bot_dir
-    bot_dir=$(cd $WORK_DIR && ls) && mv "$WORK_DIR/$bot_dir" "USERGE-X"
-    rm -rf $WORK_DIR
-    cd "USERGE-X"
-    git init > /dev/null 2>&1
-    echo -e ">><< --- >><<  Starting [X]  >><< --- >><<\n" | indent
+    cd VX
+    echo -e ">><< --- >><<  Starting [Venom-X]  >><< --- >><<\n" | indent
     bash run
 }
 

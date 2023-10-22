@@ -19,7 +19,7 @@
 			"description": "[Required] Get a Heroku API key from http://dashboard.heroku.com/account",
 			"required": false
 		},
-		"HU_STRING_SESSION": {
+		"STRING_SESSION": {
 			"description": "Get this using 'https://repl.it/@Leorio/stringsessiongen' or `bash genStr`",
 			"required": false
 		},
@@ -30,7 +30,7 @@
 		"UPSTREAM_REPO": {
 			"description": "fill only if you maintain a fork !, else leave empty",
 			"required": false,
-                        "value": "https://github.com/anonymous-x97/UX-jutsu"
+                        "value": "https://github.com/ashwinstr/VenomX"
 		},
 		"OWNER_ID": {
 			"description": "Your user_id(s) e.g 123456789 or mutiple ids",
@@ -39,7 +39,7 @@
 		"PREF_BRANCH": {
 			"description": "Upstream repo preffered branch. (Dont Touch This !)",
 			"required": false,
-			"value": "alpha"
+			"value": "main"
 		}
 	},
 	"buildpacks": [
